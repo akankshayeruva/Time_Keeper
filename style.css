@@ -1,0 +1,92 @@
+#backgroundLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('DALL·E 2024-10-24 21.48.27 - A background image for a stylish, modern clock project. The background should feature a subtle, abstract pattern with smooth gradients of dark and lig.webp') no-repeat center center;
+    background-size: cover;
+    z-index: -1; 
+}
+
+#clockContainer{  
+    position: relative;
+    margin: 50px auto;
+    height: 40vw;
+    width: 40vw; 
+    border-radius: 50%; 
+    box-shadow: 0 8px 16px brown, inset 0 4px 8px brown; 
+    border: 6px solid black; 
+    background: url(clock.png) no-repeat center center;
+    background-size: 90%;
+    background-color:burlywood; 
+}
+
+
+#hour, #minute, #second{
+    position: absolute;
+    background-color: brown; 
+    border-radius: 10px; 
+    transform-origin: bottom;
+    transition: transform 0.1s ease-out; 
+}
+
+#hour{
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.9;  
+    background-color: rgba(0, 0, 0, 0.604); 
+}
+
+#minute{
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.316); 
+}
+
+#second{
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.9;
+    background-color: red; 
+}
+
+#digitalClock {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3vw;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255); 
+    background: burlywood; 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#digitalClock:hover {
+    background: rgba(213, 131, 23, 0.826); 
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), inset 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); 
+}
+
+@keyframes ticking {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#second {
+    animation: ticking 60s infinite linear; 
+}
